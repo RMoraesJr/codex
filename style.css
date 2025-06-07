@@ -16,6 +16,12 @@ h1 {
 button {
     padding: 10px 20px;
     font-size: 1rem;
+    border-radius: 10px;
+    background-attachment: fixed;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+
     cursor: pointer;
 }
 
@@ -27,6 +33,45 @@ button {
 #new-task {
     width: 70%;
     padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    margin-right: 10px;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+#new-task:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+#due-date {
+    width: 25%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+#due-date:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+#priority {
+    width: 25%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
 }
 
 #add-task {
@@ -36,12 +81,28 @@ button {
 #task-list {
     list-style: none;
     padding: 0;
+    margin: 20px 0;
+    float: 
+    left;    width: 100%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 300px;
+    box-sizing: border-box;
+    overflow: auto;
+    max-height: 300px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 #task-list li {
-    background: #fff;
+    background: #333;
     margin-top: 10px;
     padding: 10px;
+    border-radius: 10px;
+    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
