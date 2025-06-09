@@ -1,10 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     const input = document.getElementById('new-task');
-    const addButton = document.getElementById('add-task');
+    const addButton = document.getElementById('adicionar');
+        console.log(addButton);
     const list = document.getElementById('task-list');
+    const duedate = document.getElementById('due-date');
+    const priority = document.getElementById('priority');
 
     addButton.addEventListener('click', () => {
         const text = input.value.trim();
+        const date = duedate.value.trim();
         if (text !== '') {
             const li = document.createElement('li');
             const span = document.createElement('span');
@@ -24,6 +28,30 @@ document.addEventListener('DOMContentLoaded', () => {
             li.appendChild(removeBtn);
             list.appendChild(li);
             input.value = '';
+        }
+        if (date !== '') {
+            const li = document.createElement('li');
+            li.classList.add('due-date');
+            const dateSpan = document.createElement('span');
+            dateSpan.textContent = ` (Prazo: ${date})`;
+            li.appendChild(dateSpan);
+            duedate.value = '';
+            const lastItem = list.lastElementChild;
+            if (lastItem) {
+                lastItem.appendChild(dateSpan);
+            }
+        }
+        if (priority.value !== '') {
+            const li = document.createElement('li');
+            li.classList.add('priority');
+            const prioritySpan = document.createElement('span');
+            prioritySpan.textContent = ` (Prioridade: ${priority.value})`;
+            li.appendChild(prioritySpan);
+            priority.value = '';
+            const lastItem = list.lastElementChild;
+            if (lastItem) {
+                lastItem.appendChild(prioritySpan);
+            }
         }
     });
 });

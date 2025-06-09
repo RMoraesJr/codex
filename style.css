@@ -78,6 +78,31 @@ button {
     padding: 10px 20px;
 }
 
+.completed {
+    text-decoration: line-through;
+    transition: color 5.3s ease;
+    cursor: pointer;
+    color :#4CAF50;
+    font-weight: bold;
+}
+
+li.completed:hover {
+    color: #ff0000;
+    transition: color 0.3s ease;
+}
+
+li.completed span:hover {
+    color: #ff0000;
+    transition: color 0.3s ease;
+}
+
+li span {
+    cursor: pointer;
+    transition: color 0.3s ease;
+    color: #02ff6c;
+    font-weight: bold;
+}
+
 #task-list {
     list-style: none;
     padding: 0;
